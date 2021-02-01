@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>EEEEEEE</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Latest compiled and minified JavaScript -->
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <!-----------Range slider------------------->
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+  <style>
+    .pageBody{
+  overflow-x: hidden !important;
+}
+  </style>
+</head>
+<body class="pageBody">
+  <app-root></app-root>
+  <script>
+   $(window).scroll(function(){
+    if ($(this).scrollTop() > 50) {
+       $('#navbar').addClass('sticky');
+    } else {
+       $('#navbar').removeClass('sticky');
+    }
+});
+
+    $( function() {
+    $( "#min-range-slider" ).slider({
+      range: "min",
+      value: 37,
+      min: 1,
+      max: 700,
+      slide: function( event, ui ) {
+        $( "#number" ).val( "$" + ui.value );
+      }
+    });
+    $( "#number" ).val( "$" + $( "#min-range-slider" ).slider( "value" ) );
+  } );
+
+  $( function() {
+    $( "#min-range-slider1" ).slider({
+      range: "min",
+      value: 37,
+      min: 1,
+      max: 700,
+      slide: function( event, ui ) {
+        $( "#number1" ).val( "$" + ui.value );
+      }
+    });
+    $( "#number1" ).val( "$" + $( "#min-range-slider1" ).slider( "value" ) );
+  } );
+
+    </script>
+</body>
+</html>
